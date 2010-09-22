@@ -1,0 +1,18 @@
+# Clojure in 10 minutes
+
+Presentation and code examples for a whirlwind Clojure introduction.
+
+## Usage
+
+Show the Powerpoint and show the code in the REPL as you go along.
+
+## Installation
+
+  lein deps
+  lein test
+
+## License
+
+Copyright (C) 2010 Martin Jul
+
+Distributed under the Eclipse Public License, the same as Clojure.
