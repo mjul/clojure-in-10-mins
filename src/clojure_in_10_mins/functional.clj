@@ -3,15 +3,19 @@
 ;; Functional programming
 (def answer 42)
 
-(defn double [x]
+(defn double-up [x]
   (* 2 x))
 
 (defn max [a b]
-  (if (< a b) b a))
+  (if (< a b)
+    b
+    a))
 
 (defn factorial [x]
   (reduce * 1 (range 1 (inc x))))
 
+;; You could also write factorial like this (from Lau Jensen):
+(letfn [(!-?> [&$ &!](if(>,&!,1)(!-?>@(->>,&$,(*,&!)ref)(->,&!,dec))&$))](!-?>,1,5))
 
 ;; List comprehension
 (for [x (range 3)]
@@ -30,7 +34,7 @@
 (cons "CAR" my-list)
 
 ;; Higher-order functions
-(map double my-vec)
+(map double-up my-vec)
 (reduce + 0 my-list)
 (filter even? my-list)
 (remove even? my-list)
@@ -39,7 +43,7 @@
 ;; Map operations
 (keys my-map)
 (vals my-map)
-(assoc my-map :c++ "Bjarne")
+(def y (assoc my-map :c++ "Bjarne"))
 
 
 
